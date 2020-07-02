@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Muestrafecha</title>
+</head>
+<body>
+	mostrar {{hora}} {{x}} {{lista}}
+	<br>
+	{% if tarde %}
+	
+		<p>ya es hora de almorzar</p>
+	
+		{% if listfood %}
+			<p>entro</p>
+		{% endif%}
+	
+	{% else %}
+		<p>Aùn no es hora de almorzar</p>
+	{% endif %}
+
+	{% for row in lista %}
+		<p>Nombre: {{row.articulo}}</p>
+		<p> Precio: {{row.precio}}</p>
+		<p>{{forloop.counter}}:{{row.articulo}}</p>
+	{% endfor %} 
+
+
+</body>
+</html>
